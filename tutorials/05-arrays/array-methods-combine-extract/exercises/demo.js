@@ -25,6 +25,9 @@ let minerals = ["Iron", "Gold", "Uranium"];
 // DEMO: At index 2, remove 1 item (Uranium), then
 // log the original minerals array to see the changes.
 
+// DEMO: At index 1, add 1 item (Cadmium) without removing anything, then
+// log the original minerals array to see the changes.
+
 // DEMO: Make a git commit!
 
 /* 

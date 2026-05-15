@@ -43,3 +43,7 @@ console.log(minerals); // ["Iron", "Lead", "Uranium"]
 // At index 2, remove 1 item (Uranium)
 minerals.splice(2, 1);
 console.log(minerals); // ["Iron", "Lead"]
+
+// At index 1, add 1 item (Cadmium) without removing anything
+minerals.splice(1, 0, "Cadmium");
+console.log(minerals); // ["Iron", "Cadmium", "Lead"]
