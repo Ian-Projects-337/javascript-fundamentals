@@ -13,10 +13,11 @@ const communicationSpecs = {
 };
 
 // TODO: Update the 'frequencyGhz' to 9.1 using dot notation.
-
+communicationSpecs.frequencyGhz = 9.1;
 // TODO: Update the 'encryption-protocol' to "RSA-4096" using bracket notation.
-
+communicationSpecs["encryption-protocol"] = "RSA-4096";
 // TODO: Log a full statement confirming the update using both bracket notation and dot notation.
+
 
 /** EXERCISE 2: POPULATING ENEMY DATA **/
 
@@ -32,6 +33,10 @@ const scanningDrone = {};
     Then, log a full statement using some of the properties of the object.
 */
 
+scanningDrone.classification = "Frigate";
+scanningDrone.weaponCount = 12;
+scanningDrone["shield-active"] = false;
+console.log(scanningDrone);
 /** EXERCISE 3: THE TERMINAL SELECTOR **/
 
 const airlockControls = {
@@ -46,3 +51,4 @@ let userTerminalQuery = "oxygenLevel";
     TODO: Use the 'userTerminalQuery' variable to dynamically log the correct 
     stat from the 'airlockControls' object using bracket notation.
 */
+console.log(airlockControls[userTerminalQuery]);
