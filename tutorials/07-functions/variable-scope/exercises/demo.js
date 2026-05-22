@@ -7,6 +7,8 @@ let shipName = "Rocinante";
 function displayShipName() {
 	console.log(`Transmitting identity: ${shipName}`);
 }
+// runs because a global variable
+displayShipName();
 
 // DEMO: Call the function above to see if the shipName variable is in scope
 
@@ -20,7 +22,7 @@ function processDriveCoolant(incomingWaterTons) {
 	let activeCoolantTons = incomingWaterTons * conversionFactor;
 	console.log(`Coolant active in core: ${activeCoolantTons} t`);
 }
-
+processDriveCoolant(100);
 // DEMO: Call the function above
 
 // DEMO: Log the parameter incomingWaterTons on the line below. What happens?
@@ -34,9 +36,9 @@ let fuelPods = [20, 40, 10];
 for (let i = 0; i < fuelPods.length; i++) {
 	let temporaryCalculation = fuelPods[i] * 1.1;
 	// DEMO: Un-comment this line to see what is happening when the loop runs
-	// console.log(`Pod adjusted weight: ${temporaryCalculation} t`);
+ console.log(`Pod adjusted weight: ${temporaryCalculation} t`);
 }
-
+// console.log(i);
 // DEMO: Log the loop variable i to the console on the line below. What happens?
 
 // DEMO: Log temporaryCalculation to the console on the line below. What happens?
