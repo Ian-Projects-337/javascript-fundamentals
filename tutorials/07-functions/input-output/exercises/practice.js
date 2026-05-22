@@ -36,7 +36,7 @@ function calculateShieldPower(basePower,boostFactor) {
     Capture the returned value in a constant named 'TOTAL_SHIELD'.
     Log 'TOTAL_SHIELD' to the console.
 */
-//varibable total shield not changed so use const var and best practice to make const ALL CAPS
+//variable total shield not changed so use const var and best practice to make const ALL CAPS
 const TOTAL_SHIELD = calculateShieldPower(50,2);
 console.log(TOTAL_SHIELD);
 /** EXERCISE 4: THE IS-EMPTY CHECKER **/
