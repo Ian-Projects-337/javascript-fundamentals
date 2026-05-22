@@ -3,7 +3,7 @@
 /** EXAMPLE 1 - PARAMETERS & ARGUMENTS **/
 
 // DEMO: Define a function to greet a crew member'crewName' is the parameter (the variable placeholder)
-// paramemeter part of the definition of the function
+// parameter part of the definition of the function
 function welcomeCrewMember(crewName) {
   console.log(`Welcome back to the bridge, ${crewName}`)
 }
