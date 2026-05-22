@@ -19,7 +19,13 @@
     
     Log the object to the console.
 */
-
+const pilotProfile = {
+  name: "Johnson",
+  rank: "Captain",
+  flightHours: 10,
+  isActive: false
+};
+console.log(pilotProfile);
 /** EXERCISE 2: MATERIAL CONFIGURATION **/
 
 /*
@@ -27,7 +33,11 @@
     - made of a material that is a titanium alloy
     - has a thickness of 15 centimeters
 */
-
+const hullSpecs = {
+  material: "titanium allow",
+  thickness: 15 + " centimeters"
+};
+console.log(hullSpecs);
 /** EXERCISE 3: REFERENCE CLONING CHECK **/
 
 const originalCore = { stabilityScore: 100 };
@@ -39,5 +49,5 @@ const shadowCore = originalCore;
     
     Then uncomment the two lines below and observe the output.
 */
-// shadowCore.stabilityScore = 45;
-// console.log(`Original Core Stability: ${originalCore.stabilityScore}`);
+ console.log(shadowCore.stabilityScore = 45);
+ console.log(`Original Core Stability: ${originalCore.stabilityScore}`);
