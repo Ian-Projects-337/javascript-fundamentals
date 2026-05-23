@@ -15,11 +15,16 @@ let fineAdjustmentVector = -14.62;
     Then, pass that absolute value into 'Math.round' to find the nearest integer.
     Store the final result in a constant named 'CLEAN_STEERING_ANGLE' and log it.
 */
-
+let mathAbsolute = Math.abs(fineAdjustmentVector);
+const CLEAN_STEERING_ANGLE = Math.round(mathAbsolute);
+// Can combine both variables and do at once as follows:
+//const CLEAN_STEERING_ANGLE = Math.round(Math.abs(fineAdjustmentVector));
+console.log(CLEAN_STEERING_ANGLE);
 /** EXERCISE 2: SECTOR RANGE SCANNER **/
 
 const cargoBayTemperatures = [18, 22, 14, 31, 19, 25];
-
+let highestTemp = Math.max(...cargoBayTemperatures);
+console.log(`The highest temperature in cargo bay is ${highestTemp}`);
 /*
     TODO: Use 'Math.max' along with the spread operator to pull the highest temperature 
     out of the 'cargoBayTemperatures' array. 
@@ -35,3 +40,7 @@ const fuelPodWeights = [450, 412, 498, 380];
     Subtract that lowest weight value from the highest possible capacity constant (500).
     Log how many metric tons are needed to top off that emptiest tank.
 */
+
+// let fuelMin = Math.min(...fuelPodWeights);
+let fuelPodWeightsMin = 500 - Math.min(...fuelPodWeights);
+console.log(`The lightest fuel pod ${fuelPodWeightsMin} needed to top off tank`)
