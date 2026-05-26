@@ -8,7 +8,8 @@
 /** EXERCISE 1: FLAT REACTION TEMPERATURE CHECKS **/
 
 const reactorTemperatures = [2100, 2850, 3100, 1950, 3400];
-
+const criticalTemp = reactorTemperatures.find(temp => temp > 3000);
+console.log(criticalTemp);
 /*
     TODO: Use '.find()' to scan 'reactorTemperatures' for the first raw temperature 
     value that exceeds the structural safety limits of 3000°C.
@@ -22,7 +23,8 @@ const lifeSupportSystems = [
 	{ moduleName: "Command Deck Scrubber", oxygenOutputPercent: 42 },
 	{ moduleName: "Main Engineering Vents", oxygenOutputPercent: 12 },
 ];
-
+const failedSystemIndex = lifeSupportSystems.findIndex(oxygenLevel => oxygenLevel.oxygenOutputPercent < 20);
+console.log(failedSystemIndex);
 /*
     TODO: Use '.findIndex()' on 'lifeSupportSystems' to isolate the index position 
     of the system module experiencing a structural output drop below 20%.
@@ -44,3 +46,6 @@ const gunshipMunitionsLocker = [
     as 'readyToFire: true'.
     Store the sub-array results in a constant named 'activeFireBays' and log it to the terminal.
 */
+const activeFireBays = gunshipMunitionsLocker.filter((missile,missileCapacity) => {
+return missile.missileCount > 0 && missile.readyToFire === true;});
+console.log(activeFireBays);
