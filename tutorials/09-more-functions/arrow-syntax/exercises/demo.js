@@ -10,13 +10,15 @@ function traditionalCalculateFuel(mass) {
 // STAGE 2: Block-Body Arrow Function (Explicit Return)
 
 // DEMO: Rewrite the traditional function with transitional arrow syntax;
-
+const blockArrowCalculateFuel = (mass) => {
+  return mass * 11.2;
+}
 // STAGE 3: Concise-Body Arrow Function (Implicit Return)
-
+const conciseCalculateField = mass => mass * 11.2;
 // DEMO: Rewrite the function again with concise array syntax
 
 // DEMO: Test the concise arrow function
-
+console.log(`${conciseCalculateField}`)
 /** EXAMPLE 2 - THE HOISTING PARADOX **/
 
 // 1. DEMO: On the next line, call the traditional function defined below
