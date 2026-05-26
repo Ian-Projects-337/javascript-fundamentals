@@ -8,6 +8,15 @@
 /** EXERCISE 1: COMBAT CARGO WEIGHT CHECK **/
 
 const torpedoCrateWeightsKg = [120, 150, 95, 110];
+//const totalWeaponsMass = torpedoCrateWeightsKg.reduce((acc,weight) => {
+//  return acc + weight;
+// },0);
+// can do it with implicit return also
+// let totalWeaponsMass = torpedoCrateWeightsKg.reduce((acc, weight) => acc + weight, 0);
+// console.log(totalWeaponsMass);
+let totalWeaponsMass = torpedoCrateWeightsKg.reduce((acc, weight) => acc + weight, 0);
+
+console.log(`Total Weapons Deck Allocation Payload: ${totalWeaponsMass}kg.`);
 
 /*
     TODO: Use '.reduce()' to calculate the total combined weight of all torpedo crates.
@@ -29,3 +38,7 @@ const sectorHabitationHubs = [
     population across the entire sector.
     Store the final number in a constant named 'totalSectorPopulation' and log it.
 */
+const totalSectorPopulation = sectorHabitationHubs.reduce((acc,population) => {
+  return acc + population.populationCount;
+},0);
+console.log(totalSectorPopulation);
