@@ -8,7 +8,10 @@
 /** EXERCISE 1: RECONNAISSANCE PACKET SWEEP **/
 
 const radarDistancePingsKm = [120, 450, 890, 230];
-
+const radarDistanceMiles = radarDistancePingsKm.forEach((ping) => {
+  console.log(`Distance in miles ${ping * 0.621}`)
+});
+console.log(radarDistanceMiles);
 /*
     TODO: Use '.forEach()' on the 'radarDistancePingsKm' primitive array.
     Inside your inline arrow callback, calculate the distance in miles 
@@ -26,6 +29,8 @@ const fuelCells = [42, 19, 85, 60];
     Capture the returned transformed array inside a constant named 'boostedFuelCells' 
     and log it to the console.
 */
+const boostedFuelCells = fuelCells.map(vessal => vessal * 1.5);
+console.log(boostedFuelCells);
 
 /** EXERCISE 3: FLEET COMM SIGNATURE UPDATE **/
 
@@ -40,3 +45,10 @@ const civilianShips = [
     but appends a brand-new property key named 'transponderStatus' set to the string "BROADCASTING".
     Capture this collection inside a constant named 'updatedFleetRegistry' and log it.
 */
+const updatedFleetRegistry = civilianShips.map(ship => {
+	return {
+		...ship,
+		transponderStatus: "BROADCASTING",
+	};
+});
+console.log(updatedFleetRegistry);
