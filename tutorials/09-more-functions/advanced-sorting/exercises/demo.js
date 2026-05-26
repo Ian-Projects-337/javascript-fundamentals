@@ -6,9 +6,11 @@ const structuralStressTolerances = [8, 105, 22, 1000, 4];
 
 // DEMO: Use a basic sort on the array of numbers above and log it.
 // What happens?
-
+const brokenStringSort = [...structuralStressTolerances].sort();
+console.log(brokenStringSort);
 // DEMO: Create a numeric comparator function for effective sorting of numbers
-
+const cleanAscendingSort = [...structuralStressTolerances].sort((a,b) => a - b);
+console.log(cleanAscendingSort);
 /** EXAMPLE 2 - SORTING AN OBJECT MATRIX BY KEYS **/
 
 const rocinanteCargoHold = [
@@ -18,11 +20,14 @@ const rocinanteCargoHold = [
 ];
 
 // DEMO: Sort cargo containers in DESCENDING order based on weight (heaviest first)
+const heaviestCargo = [...rocinanteCargoHold].sort((vessalA,vessalB) => {
+  return vessalB.massTons - vessalA.massTons;
+})
 
 console.log("\n--- RECONFIGURED STOWAGE BAY MANIFEST (HEAVIEST FIRST) ---");
 
 // DEMO: Use .forEach() to print each container's name and weight
-
+heaviestCargo.forEach(cargo => console.log(`${cargo.containerId} - ${cargo.massTons}`))
 // DEMO: Make a git commit!
 
 /* 
