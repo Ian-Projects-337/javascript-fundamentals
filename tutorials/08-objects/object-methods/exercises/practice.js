@@ -14,13 +14,17 @@ function transmitMessage() {
 const communicationArray = {
 	dishAlignmentDeg: 42.1,
 	frequencyMhz: 1420,
+  // didn't add manually Broadcast: transmitMessage,
 };
+communicationArray.Broadcast = transmitMessage;
+communicationArray.Broadcast();
 
 /*
     TODO: Attach the 'transmitMessage' function to the 'communicationArray' 
     object above using a new key named 'broadcast'. 
     Then, execute the method from the object.
 */
+
 
 /** EXERCISE 2: CORE HEALTH CALCULATOR **/
 
@@ -37,11 +41,14 @@ const engineeringDriveCore = {
             Return a template literal reading: 
             "The [coreName] has [margin]°C remaining before structural failure."
         */
+  let margin = this.maxSafeTemperature - this.currentTemperature;
+  console.log(`the ${this.coreName} has ${margin} before structural failure. `)
+  return margin;
 	},
 };
 
 // TODO: Test the method by calling it on the object.
-
+engineeringDriveCore.checkThermalSafety();
 /** EXERCISE 3: DYNAMIC REFUEL MODULATOR **/
 
 const fuelPod = {
@@ -57,7 +64,14 @@ const fuelPod = {
             - If it fits: add the amount to 'this.currentReserveTons' and log the success.
             Use template literals for both logs.
         */
+    if (this.currentReserveTons + amount > this.maxCapacityTons) {
+      console.log(`ALERT EXCEEDING: ${this.maxCapacityTons} will not add fuel`)
+     // works but can make more concise else{ console.log(`Sucessfully added fuel current reserver is: ${amount + this.currentReserveTons}`)
+    } else{
+      this.currentReserveTons += amount;
+      console.log(`Success: ${this.podIdentifier} reserve level increased to ${this.currentReserveTons}t.`)
+    }
 	},
 };
-
+fuelPod.addFuel(200);
 // TODO: Test the method with a value that should fail, then again with one that should succeed.
