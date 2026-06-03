@@ -1,28 +1,33 @@
-/**** DESTRUCTURING ARRAYS ****/
+/**** DESTRUCTURING OBJECTS ****/
 
-/** EXAMPLE 1 - POSITION-BASED EXTRACTION **/
+/** EXAMPLE 1 - THE TRADITIONAL UNPACKING ROUTINE **/
 
-const flightPlan = ["Earth Orbit", "Asteroid Belt", "Jupiter Core"];
+const supplyCrate = {
+  crateId: "RG3-917",
+  fuelType: "Hydrogen Gas",
+  crateWeight: 450,
+  manufacturer: "ACME Ltd.",
+  securityClearance: "Level 2",
+};
 
-// DEMO: Destructure the array into three distinct variables storing each element.
+// Separate declarations with multiple references to access properties
+const fuel = supplyCrate.fuelType;
+const weight = supplyCrate.crateWeight;
+const company = supplyCrate.manufacturer;
 
-// DEMO: Use the new variables to complete the flight plan below, and run it.
-console.log(`---FLIGHT PLAN-------------------------
-Origin:
-Layover:
-Final Destination:
-`);
+console.log(`Old System: Loading ${fuel} weighing ${weight}kg from ${company}.`);
 
-/** EXAMPLE 2 - SKIPPING UNWANTED CARGO **/
+/** EXAMPLE 2 - THE DESTRUCTURING CLAW **/
 
-const crew = ["Captain Holden", "Mechanic Amos", "Pilot Alex"];
+// DEMO: Destructure properties directly into variables matching the key names
+const { fuelType, crateWeight, securityClearance } = supplyCrate;
+// DEMO: Log statements using new variables
+console.log(`Mordern System: Loading ${fuelType} weighting ${crateWeight}`)
+/** EXAMPLE 3 - FLEXIBLE NAMING **/
 
-// DEMO: Create new variable names to store the captain and the pilot only
-
-// DEMO: Update the template literal below, then run it.
-console.log(`\nFlight Deck Alert: (captain) and (pilot) report to the bridge.`);
-
-
+// DEMO: Change the name while you destructuring and log a statement.
+const { crateId: id } = supplyCrate
+console.log(`Crate ${id} has been delivered.`)
 // DEMO: Make a git commit!
 
 /* 
